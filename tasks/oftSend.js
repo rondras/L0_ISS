@@ -29,10 +29,11 @@ module.exports = async function (taskArgs, hre) {
 
     // quote fee with default adapterParams
     let adapterParams = ethers.utils.solidityPack(["uint16", "uint256"], [1, 200000]) // default adapterParams example
-
+    console.log(adapterParams)
     let fees = await localContractInstance.estimateSendFee(remoteChainId, toAddress, qty, false, adapterParams)
+    //let fees = [BigInt(1000000000000000000)]
     console.log(`fees[0] (wei): ${fees[0]} / (eth): ${ethers.utils.formatEther(fees[0])}`)
-
+    console.log(remoteChainId)
     let tx = await (
         await localContractInstance.sendFrom(
             owner.address, // 'from' address to send tokens

@@ -6,6 +6,8 @@
   "arbitrum":         110,
   "optimism":         111,
   "fantom":           112,
+  "scroll":           214,
+  "base":             184,
 
   "goerli":           10121,
   "bsc-testnet":      10102,
@@ -15,5 +17,7 @@
   "optimism-goerli":  10132,
   "fantom-testnet":   10112,
   "meter-testnet":    10156,
-  "zksync-testnet":   10165
+  "zksync-testnet":   10165,
+  "scroll-testnet":   10214,
+  "base-testnet":     10160
 }
