@@ -11,7 +11,7 @@ module.exports = async function ({ deployments, getNamedAccounts }) {
     // Deploy the ISS conctract
     const tokenName = "ISSUAA Distribution Token"
     const tokenSymbol = "IDT"
-    const initialSupply = (BigInt(100000000) * BigInt(1e18)).toString()
+    const initialSupply = (BigInt(50000000) * BigInt(1e18)).toString()
     console.log(initialSupply)
 
     const governanceToken = await deploy("IDT", {
