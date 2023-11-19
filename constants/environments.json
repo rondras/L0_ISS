@@ -8,7 +8,9 @@
     "optimism",
     "fantom",
     "scroll",
-    "base-testnet"
+    "base-testnet",
+    "linea",
+    "mantle"
   ],
   "testnet": [
     "goerli",

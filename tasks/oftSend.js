@@ -28,10 +28,10 @@ module.exports = async function (taskArgs, hre) {
     const localContractInstance = await ethers.getContract(localContract)
 
     // quote fee with default adapterParams
-    let adapterParams = ethers.utils.solidityPack(["uint16", "uint256"], [1, 200000]) // default adapterParams example
+    let adapterParams = ethers.utils.solidityPack(["uint16", "uint256"], [1, 110000]) // default adapterParams example
     console.log(adapterParams)
     let fees = await localContractInstance.estimateSendFee(remoteChainId, toAddress, qty, false, adapterParams)
-    //let fees = [BigInt(1000000000000000000)]
+    //let fees = [BigInt(10000000000000000)]
     console.log(`fees[0] (wei): ${fees[0]} / (eth): ${ethers.utils.formatEther(fees[0])}`)
     console.log(remoteChainId)
     let tx = await (
@@ -42,7 +42,7 @@ module.exports = async function (taskArgs, hre) {
             qty, // amount of tokens to send (in wei)
             owner.address, // refund address (if too much message fee is sent, it gets refunded)
             ethers.constants.AddressZero, // address(0x0) if not paying in ZRO (LayerZero Token)
-            "0x", // flexible bytes array to indicate messaging adapter services
+            adapterParams, // flexible bytes array to indicate messaging adapter services
             { value: fees[0] }
         )
     ).wait()

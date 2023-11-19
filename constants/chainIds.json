@@ -8,6 +8,8 @@
   "fantom":           112,
   "scroll":           214,
   "base":             184,
+  "linea":            183,
+  "mantle":           181,
 
   "goerli":           10121,
   "bsc-testnet":      10102,

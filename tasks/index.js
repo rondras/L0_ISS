@@ -7,9 +7,9 @@ task(
     require("./distributeIDT")
 )
 task(
-    "sendISSForIDT",
+    "sendISS",
     "send ISS tokens to the VotingEscrow contract",
-    require("./sendISSForIDT")
+    require("./sendISS")
 )
 
 task("getSigners", "show the signers of the current mnemonic", require("./getSigners")).addOptionalParam("n", "how many to show", 3, types.int)

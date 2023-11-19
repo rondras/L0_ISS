@@ -88,6 +88,13 @@ module.exports = {
       mumbai: "KUG6WXTB5YCCBMSFXM9ASNRGCGBDMVNRU9",
       base: "FGDS3IXQYACEXXARS65JUBP3E1RRHJEH3X",
       scroll: "KID4VZSH5FQKFTQXVQS168HND71XZCGQCB",
+      mainnet:"2W4NSRK6T3JR6WU41HHNCH5EBZJEW5DFXW",
+      bsc:"44XXFPY2IA7RMYY95DC7XWSKW3JZARQX3D",
+      arbitrumOne:"Q6SQ8QBKF9UMWJ481Q36ZI67R9BTCG43XQ",
+      optimisticEthereum:"PS3E6X4GJYV22B4H26CVRHT2IA8PVY8U31",
+      avax:"",
+      polygon:"KUG6WXTB5YCCBMSFXM9ASNRGCGBDMVNRU9",
+      linea:"2SAA7RMEGMMA2H22WCE28G2MNFCVBCQRUS",
     },
     customChains: [
       {
@@ -107,6 +114,14 @@ module.exports = {
         }
       },
       {
+        network: "linea",
+        chainId: 59144,
+        urls: {
+         apiURL: "https://api.lineascan.build/api",
+         browserURL: "https://lineascan.build"
+        }
+      },
+      {
         network: 'scroll-testnet',
         chainId: 534351,
         urls: {
@@ -118,8 +133,8 @@ module.exports = {
         network: "scroll",
         chainId: 534352,
         urls: {
-         apiURL: "xxxx",
-         browserURL: "https://blockscout.scroll.io/"
+         apiURL: "https://api.scrollscan.com/api",
+         browserURL: "https://scrollscan.com//"
         }
       },
       {
@@ -203,6 +218,11 @@ module.exports = {
     base: {
       url: `https://base.llamarpc.com`,
       chainId: 8453,
+      accounts: [DEPLOYER_PRIVATE_KEY],
+    },
+    linea: {
+      url: `https://linea.drpc.org`,
+      chainId: 59144,
       accounts: [DEPLOYER_PRIVATE_KEY],
     },
 
