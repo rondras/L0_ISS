@@ -1,5 +1,5 @@
 const airdropEntries = require("../constants/migration.json")
-
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 
 module.exports = async function (taskArgs, hre) {
@@ -11,6 +11,7 @@ module.exports = async function (taskArgs, hre) {
         legacyTokenNumber += BigInt(_amount)
         let tx = await (await IDT.transfer(_address, _amount)).wait()
         console.log(`${(airdropEntries[i][1]/1e18)} token sent to ${_address}. tx: ${tx.transactionHash}`)
+        await sleep(2000)
     }
     
 }

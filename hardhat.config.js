@@ -95,6 +95,7 @@ module.exports = {
       avax:"",
       polygon:"KUG6WXTB5YCCBMSFXM9ASNRGCGBDMVNRU9",
       linea:"2SAA7RMEGMMA2H22WCE28G2MNFCVBCQRUS",
+      "bera-testnet":"xxxxx"
     },
     customChains: [
       {
@@ -151,6 +152,14 @@ module.exports = {
         urls: {
          apiURL: "https://api-testnet.polygonscan.com/api",
          browserURL: "https://mumbai.polygonscan.com/"
+        }
+      },
+      {
+        network: "bera-testnet",
+        chainId: 2061,
+        urls: {
+         apiURL: "https://scan-api.berachain-internal.com/api/",
+         browserURL: "https://scan.berachain-internal.com/"
         }
       }
     ]
@@ -269,6 +278,11 @@ module.exports = {
     'base-testnet': {
       url: `https://goerli.base.org`,
       chainId: 84531,
+      accounts: [DEPLOYER_PRIVATE_KEY],
+    },
+    'bera-testnet': {
+      url: `https://rpc.berachain-internal.com`,
+      chainId: 2061,
       accounts: [DEPLOYER_PRIVATE_KEY],
     }
   }
