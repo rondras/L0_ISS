@@ -95,7 +95,8 @@ module.exports = {
       avax:"",
       polygon:"KUG6WXTB5YCCBMSFXM9ASNRGCGBDMVNRU9",
       linea:"2SAA7RMEGMMA2H22WCE28G2MNFCVBCQRUS",
-      "bera-testnet":"xxxxx"
+      "bera-testnet":"xxxxx",
+      "bera-artio":"xxxxx"
     },
     customChains: [
       {
@@ -161,6 +162,14 @@ module.exports = {
          apiURL: "https://scan-api.berachain-internal.com/api/",
          browserURL: "https://scan.berachain-internal.com/"
         }
+      },
+      {
+        network: "bera-artio",
+        chainId: 80085,
+        urls: {
+          apiURL: "https://api.routescan.io/v2/network/testnet/evm/80085/etherscan",
+          browserURL: "https://artio.beratrail.io"
+        },
       }
     ]
   },
@@ -283,6 +292,11 @@ module.exports = {
     'bera-testnet': {
       url: `https://rpc.berachain-internal.com`,
       chainId: 2061,
+      accounts: [DEPLOYER_PRIVATE_KEY],
+    },
+    'bera-artio': {
+      url: `https://artio.rpc.berachain.com/`,
+      chainId: 80085,
       accounts: [DEPLOYER_PRIVATE_KEY],
     }
   }

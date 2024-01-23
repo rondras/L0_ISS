@@ -10,6 +10,7 @@
   "base":             184,
   "linea":            183,
   "mantle":           181,
+  "bera":             100000,
 
   "goerli":           10121,
   "bsc-testnet":      10102,
@@ -21,5 +22,6 @@
   "meter-testnet":    10156,
   "zksync-testnet":   10165,
   "scroll-testnet":   10214,
-  "base-testnet":     10160
+  "base-testnet":     10160,
+  "bera-artio":       11111
 }

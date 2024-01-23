@@ -9,8 +9,17 @@ module.exports = async function ({ deployments, getNamedAccounts }) {
     console.log(`[${hre.network.name}] Endpoint Address: ${lzEndpointAddress}`)
 
     // Deploy the ISS conctract
-    const tokenName = "ISSUAA Distribution Token"
-    const tokenSymbol = "IDT"
+    var tokenName
+    var tokenSymbol
+    if (hre.network.name === "bera-artio")
+    {
+        tokenName = "ISSUAA Distribution Token"
+        tokenSymbol = "bIDT"
+    }
+    else{
+        tokenName = "ISSUAA Distribution Token"
+        tokenSymbol = "IDT"
+    }
     const initialSupply = (BigInt(50000000) * BigInt(1e18)).toString()
     console.log(initialSupply)
 
